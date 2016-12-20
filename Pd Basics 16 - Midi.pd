@@ -1,0 +1,61 @@
+#N canvas 656 97 1251 733 10;
+#X text -216 -365 This example shows how to get input from a midi keyboard
+connected to your computer.;
+#X obj -121 -173 notein;
+#X text -203 -313 IMPORTANT - to get started you need to set up your
+midi inputs. 1 - select media from the pd-extended menu 2 - Select
+the MIDI settings option 3 - if "Input device 1:" = none -press the
+button and select your keyboard. 4 - click apply and then ok;
+#X floatatom -52 -104 5 0 0 3 Channel - -;
+#X floatatom -196 -106 5 0 0 3 Note_Number - -;
+#X floatatom -115 -105 5 0 0 3 Velocity - -;
+#X text -72 -177 <- notein produces 3 outputs when a note is received
+;
+#X floatatom -179 61 5 0 0 3 Note_Number - -;
+#X floatatom -106 61 5 0 0 3 Velocity - -;
+#X obj -147 -7 notein 2;
+#X text -87 -8 <- adding a number to this objects means that this will
+only output note recived on a particular channel. In this case channel
+2;
+#X obj -107 146 notein;
+#X floatatom -38 215 5 0 0 3 Channel - -;
+#X floatatom -182 213 5 0 0 3 Note_Number - -;
+#X floatatom -101 214 5 0 0 3 Velocity - -;
+#X text -58 142;
+#X obj -183 269 mtof;
+#X floatatom -183 312 5 0 0 0 - - -;
+#X text -143 270 <- mtof converts the midi note number to a frequency
+\, this is useful for synthesis. For example midi note 69 is an A with
+frequency 440Hz;
+#X obj -104 381 notein;
+#X floatatom -71 409 5 0 0 3 Channel - -;
+#X floatatom -179 448 5 0 0 3 Note_Number - -;
+#X floatatom -98 449 5 0 0 3 Velocity - -;
+#X obj -180 504 mtof;
+#X floatatom -179 545 5 0 0 0 - - -;
+#X text -140 505;
+#X text -55 377;
+#X floatatom -97 545 5 0 0 0 - - -;
+#X obj -98 504 / 127;
+#X text -32 506 <- this objects divides the velocity by 128 - this
+wil then output a number between 0 and 1 - we could use this to provide
+a rougth volume envelope;
+#X text -28 454 <- Velocity is a number between 0 and 127;
+#X connect 1 0 4 0;
+#X connect 1 1 5 0;
+#X connect 1 2 3 0;
+#X connect 9 0 7 0;
+#X connect 9 1 8 0;
+#X connect 11 0 13 0;
+#X connect 11 1 14 0;
+#X connect 11 2 12 0;
+#X connect 13 0 16 0;
+#X connect 16 0 17 0;
+#X connect 19 0 21 0;
+#X connect 19 1 22 0;
+#X connect 19 2 20 0;
+#X connect 21 0 23 0;
+#X connect 22 0 28 0;
+#X connect 23 0 24 0;
+#X connect 28 0 27 0;
+#X coords 0 733 1 732 85 60 0;

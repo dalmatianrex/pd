@@ -1,0 +1,11 @@
+#N canvas 171 244 651 310 10;
+#X obj 99 132 print;
+#X obj 100 43 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X msg 99 90 hello world;
+#X text 188 83 This is a message which contains a string "Hello World
+;
+#X text 134 43 Click on the bang to trigger the message;
+#X text 151 135 The print object sends messages to the pd window;
+#X connect 1 0 2 0;
+#X connect 2 0 0 0;

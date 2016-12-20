@@ -1,0 +1,47 @@
+#N canvas 449 49 690 600 10;
+#X floatatom 22 65 5 0 0 0 - - -;
+#X floatatom 71 65 5 0 0 0 - - -;
+#X obj 22 108 +;
+#X floatatom 22 145 5 0 0 0 - - -;
+#X floatatom 122 64 5 0 0 0 - - -;
+#X floatatom 171 64 5 0 0 0 - - -;
+#X floatatom 122 144 5 0 0 0 - - -;
+#X floatatom 222 64 5 0 0 0 - - -;
+#X floatatom 271 64 5 0 0 0 - - -;
+#X floatatom 222 144 5 0 0 0 - - -;
+#X obj 122 107 -;
+#X obj 222 107 *;
+#X floatatom 320 64 5 0 0 0 - - -;
+#X floatatom 369 64 5 0 0 0 - - -;
+#X floatatom 320 144 5 0 0 0 - - -;
+#X obj 320 107 /;
+#X text 411 64 <- try changing the numbers stored;
+#X text 18 193 You may have noticed that the result is not updated
+if only the right input changes. A way around this is to use a bang.
+;
+#X floatatom 77 251 5 0 0 0 - - -;
+#X floatatom 126 251 5 0 0 0 - - -;
+#X obj 77 294 +;
+#X floatatom 77 331 5 0 0 0 - - -;
+#X obj 35 282 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X text 24 -1 PD has basic maths functionality built in \, it can do
+addition \, subtraction \, multiplication and dividing. multiplication
+is the * symbol \, division is /;
+#X connect 0 0 2 0;
+#X connect 1 0 2 1;
+#X connect 2 0 3 0;
+#X connect 4 0 10 0;
+#X connect 5 0 10 1;
+#X connect 7 0 11 0;
+#X connect 8 0 11 1;
+#X connect 10 0 6 0;
+#X connect 11 0 9 0;
+#X connect 12 0 15 0;
+#X connect 13 0 15 1;
+#X connect 15 0 14 0;
+#X connect 18 0 20 0;
+#X connect 19 0 20 1;
+#X connect 19 0 22 0;
+#X connect 20 0 21 0;
+#X connect 22 0 20 0;

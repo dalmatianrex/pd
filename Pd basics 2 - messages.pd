@@ -1,0 +1,18 @@
+#N canvas 171 244 938 461 10;
+#X obj 115 241 print;
+#X text 167 244 The print object sends messages to the pd window;
+#X text 261 34 Mesages in pd contain information \, this can be text
+or numbers. Messages can hold a number of items.;
+#X msg 36 68 Hello;
+#X msg 116 121 1000;
+#X text 93 94;
+#X text 31 19 This is a message which contains a string "Hello;
+#X text 117 98 This message contains a number;
+#X msg 188 143 1 2 3 4 5;
+#X text 257 145 This message print out some numbers;
+#X msg 197 196 1 \, 2 \, 3 \, 4 \, 5;
+#X text 295 200 Commers turn this messahe into a list of numbers;
+#X connect 3 0 0 0;
+#X connect 4 0 0 0;
+#X connect 8 0 0 0;
+#X connect 10 0 0 0;

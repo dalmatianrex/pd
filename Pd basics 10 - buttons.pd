@@ -1,0 +1,17 @@
+#N canvas 480 351 500 267 10;
+#X obj 27 34 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 71 73 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0 1
+;
+#X obj 86 127 hradio 15 1 0 8 empty empty empty 0 -8 0 10 -262144 -1
+-1 7;
+#X text 11 -21 Buttons are really useful for triggering actions \,
+if they are pressed they will send a bang.;
+#X text 53 31 <- this is the bang button;
+#X obj 29 180 print;
+#X text 97 69 <- this is toggle \, it outputs 0 or 1;
+#X text 218 126 <- This is a radio button it outputs a number dependant
+u upon which button you have selected;
+#X connect 0 0 5 0;
+#X connect 1 0 5 0;
+#X connect 2 0 5 0;

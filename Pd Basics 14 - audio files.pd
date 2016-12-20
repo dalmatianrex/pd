@@ -1,0 +1,30 @@
+#N canvas 525 215 1070 423 10;
+#X text 11 -21 In this example we look at how to open and play an audio
+file.;
+#X msg 159 89 0;
+#X msg 22 61 start;
+#X msg 16 105 stop;
+#X text 188 66 start playback;
+#X text 188 88 stop it;
+#X msg 159 68 1;
+#X obj 90 141 readsf~;
+#X obj 91 196 dac~;
+#X text 141 140 <- here we open an audio file with readsf~ to play
+it we need to send a star message or a 1 Each time we want the audio
+to play we need to load and play.;
+#X obj 673 274 readsf~;
+#X msg 94 19 open ./drums/ride.wav;
+#X msg 673 240 open ./drums/ride.wav \, 1;
+#X obj 675 320 dac~;
+#X text 333 237 This is example we have a message that has 2 parts.
+-> We load and send a 1 with one click;
+#X connect 1 0 7 0;
+#X connect 2 0 7 0;
+#X connect 3 0 7 0;
+#X connect 6 0 7 0;
+#X connect 7 0 8 0;
+#X connect 10 0 13 0;
+#X connect 10 0 13 1;
+#X connect 11 0 7 0;
+#X connect 12 0 10 0;
+#X coords 0 423 1 422 85 60 0;

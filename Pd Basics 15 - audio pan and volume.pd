@@ -1,0 +1,33 @@
+#N canvas 407 356 1251 733 10;
+#X obj 19 -491 osc~ 200;
+#X obj 60 -409 panvol~;
+#X obj 64 -340 dac~;
+#X obj 98 -499 hsl 128 15 -45 45 0 0 empty empty Pan -2 -8 0 10 -262144
+-1 -1 6600 1;
+#X floatatom 93 -460 5 0 0 0 - - -;
+#X obj -2 -341 pvu~;
+#X obj 1 -290 vu 15 120 empty empty -1 -8 0 10 -66577 -1 1 0;
+#X obj 119 -339 pvu~;
+#X obj 122 -288 vu 15 120 empty empty -1 -8 0 10 -66577 -1 1 0;
+#X msg 97 -552 0;
+#X text 136 -555 <- sending a 0 to the slide sets it at the central
+point;
+#X text -51 -587 This exampes implements both pan and volume using
+panvol;
+#X obj 240 -443 vsl 15 128 0 1 0 0 empty empty Vol 0 -9 0 10 -262144
+-1 -1 12700 1;
+#X text 244 -501 <- this slider is set to output between -45 and +45
+;
+#X text 268 -432 <- this slider is set to output between 0 and 1;
+#X connect 0 0 1 0;
+#X connect 1 0 2 0;
+#X connect 1 0 5 0;
+#X connect 1 1 2 1;
+#X connect 1 1 7 0;
+#X connect 3 0 4 0;
+#X connect 4 0 1 1;
+#X connect 5 0 6 0;
+#X connect 7 0 8 0;
+#X connect 9 0 3 0;
+#X connect 12 0 1 2;
+#X coords 0 733 1 732 85 60 0;

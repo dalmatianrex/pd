@@ -1,0 +1,28 @@
+#N canvas 593 139 549 572 10;
+#X floatatom 20 78 5 0 0 0 - - -;
+#X text 7 6 The number object is used to store a number \, it can hold
+intergers (e.g. 1 \, 2 \, 1000) and floating point values (e.g 10.3
+\, 3000.2);
+#X text 24 113 ^ shift/click on a number object and then move the mouse
+up or down to change the value;
+#X floatatom 20 216 5 0 0 0 - - -;
+#X msg 21 179 set 100;
+#X text 82 173 <- the contents of a number can be set by a set message
+(try clicking on the message);
+#X obj 21 265 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X floatatom 21 309 5 0 0 0 - - -;
+#X obj 21 351 print;
+#X text 62 305 <- when a number obkect receives a bang \, it outputs
+the number;
+#X text 59 75 <-You can click on the number of object and type a number
+in it to store;
+#X text 16 392 properties - right click on a number object in edit
+mode to bring up the properties menu. Here you can set the minimum
+and maximum number that can be stored \, and you can also set a label
+;
+#X floatatom 20 481 5 0 0 3 frequency - -;
+#X text 65 479 <- this number has the label "frequency";
+#X connect 4 0 3 0;
+#X connect 6 0 7 0;
+#X connect 7 0 8 0;

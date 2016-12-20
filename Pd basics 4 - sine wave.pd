@@ -1,0 +1,19 @@
+#N canvas 277 125 856 434 10;
+#X obj -193 111 osc~;
+#X obj -192 174 dac~;
+#X msg -194 55 1000;
+#X msg -249 54 500;
+#X msg -145 55 2000;
+#X text -155 112 <- The osc~ object outputs a cosine wave \, its frequency
+can be chaned by sending messages to it.;
+#X text -103 51 < - click on the messages to chnage the frequency;
+#X text -154 174 <- The dac~ object sends audio to your sound card
+outputs;
+#X text -443 2 Make sure that dsp is selected in the Pd-extended window
+(or you wont hear anthing!);
+#X text -405 114 when a message containg a number is recived in the
+right input \, this changes the frequency that osc~ oscillates at;
+#X connect 0 0 1 0;
+#X connect 2 0 0 0;
+#X connect 3 0 0 0;
+#X connect 4 0 0 0;

@@ -1,0 +1,19 @@
+#N canvas 381 139 693 391 10;
+#X obj 31 82 vsl 15 128 0 127 0 0 empty empty empty 0 -9 0 10 -262144
+-1 -1 0 1;
+#X text 18 10 A slider is a graphical object \, it operates very much
+like a fader. In PD there are vertical and horizontal sliders. When
+in perfomance mode \, if you change the position of the slider it will
+output a number.;
+#X floatatom 30 243 5 0 0 0 - - -;
+#X text 55 118 <- try changing the slider position \, this will output
+a number between 0 and 127 \, you can change this range via the objects
+properties - output-range;
+#X text 52 91 comment;
+#X obj 129 199 hsl 128 15 0 127 0 0 empty empty cuttoff_frequency -2
+-8 0 10 -262144 -1 -1 0 1;
+#X floatatom 125 241 5 0 0 0 - - -;
+#X text 271 195 <- this fader has a label "cuttoff_frequency" - this
+is set in the properites box;
+#X connect 0 0 2 0;
+#X connect 5 0 6 0;

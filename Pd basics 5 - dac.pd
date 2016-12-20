@@ -1,0 +1,12 @@
+#N canvas 277 125 748 311 10;
+#X obj -402 126 dac~;
+#X text -443 2 Make sure that dsp is selected in the Pd-extended window
+(or you wont hear anthing!);
+#X obj -400 60 osc~ 1000;
+#X text -330 60 <- The osc~ object outputs a cosine wave;
+#X text -405 114;
+#X text -361 123 <- The dac~ object sends audio to your sound card
+outputs \, by default is outputs in stereo \, the left input for the
+left channel and the right imput for the right channel;
+#X connect 2 0 0 0;
+#X connect 2 0 0 1;

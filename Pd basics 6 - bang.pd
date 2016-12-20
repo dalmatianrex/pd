@@ -1,0 +1,17 @@
+#N canvas 277 125 856 434 10;
+#X text -434 12 The bang comand is very important \, when an object
+receives a bang it causes it to do something. Bangs can be produced
+by buttons \, or called when the patch loads.;
+#X obj -390 162 print;
+#X obj -392 90 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj -21 92 loadbang;
+#X obj -21 213 print;
+#X text 47 90 <- loadbang sends a bang message when the patch loads
+\, it is used for setting up your patch.;
+#X msg -21 149 Hello your patch as started;
+#X text -369 87 < - clicking on the button sends a bang to the print
+object;
+#X connect 2 0 1 0;
+#X connect 3 0 6 0;
+#X connect 6 0 4 0;

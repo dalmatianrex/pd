@@ -1,0 +1,26 @@
+#N canvas 480 351 1057 546 10;
+#X text 17 463 comment;
+#X text -20 -13 Metering is used to give visual feedback on audio.
+;
+#X obj 570 12 osc~ 1000;
+#X obj 559 68 pvu~;
+#X obj 632 68 rvu~;
+#X text 344 67 pvu~ calculates peak VU Metering ->;
+#X text 666 67 <- rvu~ calculates rms VU metering;
+#X text 637 9 <- generates a sine at 1000Hz;
+#X obj 45 284 Scope~ 130 130 256 3 128 -1 1 0 0 0 0 102 255 51 135
+135 135 0;
+#X obj 45 243 osc~ 10;
+#X text 98 240 <- osc~ generates a sine wave;
+#X text 185 297 <- the Scope~ object displays time domain audio;
+#X text 111 86 <- a vu meter \, you can turn the numbers off via properties
+;
+#X obj 67 45 vu 15 120 empty empty -1 -8 0 10 -66577 -1 1 0;
+#X obj 558 126 vu 15 120 empty empty -1 -8 0 10 -66577 -1 1 0;
+#X obj 631 126 vu 15 120 empty empty -1 -8 0 10 -66577 -1 1 0;
+#X text 15 445 Turn on DSP to run audio;
+#X connect 2 0 3 0;
+#X connect 2 0 4 0;
+#X connect 3 0 14 0;
+#X connect 4 0 15 0;
+#X connect 9 0 8 0;

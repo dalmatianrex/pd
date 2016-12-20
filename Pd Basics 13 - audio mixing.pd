@@ -1,0 +1,27 @@
+#N canvas 480 351 1070 423 10;
+#X obj 329 48 osc~ 1000;
+#X obj 354 229 vu 15 120 empty empty -1 -8 0 10 -66577 -1 1 0;
+#X obj 354 192 pvu~;
+#X obj 292 194 dac~;
+#X text 11 -21 In this example we look at mixing several audio streams
+to gether. This is done by adding the streams together by the +~ object
+;
+#X text 519 59;
+#X obj 358 132 +~;
+#X text 98 132 +~ mixes the audio streams together ->;
+#X obj 412 49 osc~ 500;
+#X obj 545 49 osc~ 100;
+#X obj 634 49 osc~ 200;
+#X obj 576 118 pvu~;
+#X text 34 50 osc~ outputs a sine wave at 1Khz amd at 500Hz->;
+#X obj 577 155 vu 15 120 empty empty -1 -8 0 10 -66577 -1 1 0;
+#X text 626 102 <- mixing is also acheived by routing two streams to
+the same point (this does not have to be pvu~);
+#X connect 0 0 6 0;
+#X connect 2 0 1 0;
+#X connect 6 0 2 0;
+#X connect 6 0 3 0;
+#X connect 8 0 6 1;
+#X connect 9 0 11 0;
+#X connect 10 0 11 0;
+#X connect 11 0 13 0;
